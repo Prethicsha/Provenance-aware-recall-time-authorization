@@ -1,0 +1,49 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environments & Virtual Envs
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Large Raw Archives (>100MB exceeds GitHub push limits)
+data/raw/enron email.zip
+data/raw/dataset_for_huggingface.jsonl
+data/raw/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv
+data/raw/*.zip
+data/raw/*.xlsx
+nlp conference.zip
+
+# Keep MemShield raw splits & processed normalized memories
+!data/raw/memshield/
+!data/processed/
+
+# Local Vector Store (regenerated via scripts/build_memory.py)
+data/chroma_*/
+data/chroma_db/
+
+# Local runtime logs
+logs/
+
+# Local backup directory
+_archive_backup/
+
+# Conference Paper & Submission Packages (Demo only)
+paper/
+submission/
+scripts/build_submission_package.py
+scripts/create_submission_zip.py
+scripts/export_to_excel.py
+scripts/generate_manifest.py
+powershell.cmd
+
+# IDE / OS metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

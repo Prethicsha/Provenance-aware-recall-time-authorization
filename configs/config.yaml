@@ -1,0 +1,48 @@
+# Provenance-Aware Recall-Time Defense Configuration
+random_seed: 42
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+  batch_size: 64
+
+chromadb:
+  persist_directory: "data/chroma_db"
+  collection_name: "agent_persistent_memory"
+
+llm:
+  provider: "ollama"  # Options: 'ollama', 'mock', 'openai'
+  model: "llama3:latest"
+  temperature: 0.0
+  timeout: 60
+  base_url: "http://localhost:11434"
+
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.35
+
+security:
+  untrusted_tier_threshold: 0   # Tier 0 is Untrusted External
+  user_tier: 1                  # Tier 1 is Authenticated User
+  supervisor_tier: 2            # Tier 2 is Supervisor/Admin
+  system_tier: 3                # Tier 3 is Trusted System Root
+  tool_sensitivity_medium: 2
+  tool_sensitivity_high: 3
+  block_untrusted_on_medium: true
+  block_untrusted_on_high: true
+
+datasets:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  scenarios_dir: "data/scenarios"
+  memshield_dir: "data/raw/memshield"
+  bipia_path: "data/raw/dataset_for_huggingface.jsonl"
+  bitext_path: "data/raw/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv"
+  enron_zip_path: "data/raw/enron email.zip"
+  max_enron_samples: 500
+  max_bitext_samples: 2000
+  max_bipia_samples: 2000
+
+audit:
+  log_file: "logs/security_audit.jsonl"
+  enabled: true

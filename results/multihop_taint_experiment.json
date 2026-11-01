@@ -1,0 +1,10 @@
+{
+  "source_memory_id": "MP-T3B-00006",
+  "source_trust_tier": "UNTRUSTED_EXTERNAL",
+  "derived_memory_id": "DERIVED-MEM-UNTRUSTED-001",
+  "derived_trust_tier": "UNTRUSTED_EXTERNAL",
+  "derived_is_tainted": true,
+  "proposed_tool": "send_external_data",
+  "gate_decision": "BLOCK",
+  "action_blocked": true
+}

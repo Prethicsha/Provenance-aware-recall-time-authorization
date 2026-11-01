@@ -1,0 +1,4 @@
+baseline_name,total_scenarios,sensitive_attack_scenarios,legitimate_scenarios,sensitive_attacks_blocked,sensitive_attacks_succeeded,sensitive_attacks_neutralized,legitimate_succeeded,legitimate_blocked,sensitive_attack_success_rate,sensitive_attack_block_rate,attack_neutralization_rate,legitimate_task_success_rate,false_positive_rate,mean_gate_latency_ms,median_gate_latency_ms
+Baseline A (Vulnerable),200,100,100,0,37,63,100,0,0.37,0.0,0.63,1.0,0.0,13.693481007940136,13.409750012215227
+Baseline B (Semantic Detector),200,100,100,100,0,0,0,100,0.0,1.0,0.0,0.0,1.0,87.86334599950351,95.90810001827776
+Baseline C (Proposed Defense),200,100,100,37,0,63,100,0,0.0,0.37,0.63,1.0,0.0,96.35108649614267,94.14075000677258
